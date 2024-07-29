@@ -13,7 +13,7 @@ type Config struct {
     DB struct {
         Driver      string
         Host        string
-        Port        string
+        Port        int
         User        string
         Password    string
         Name        string
