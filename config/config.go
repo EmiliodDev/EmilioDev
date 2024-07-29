@@ -7,31 +7,31 @@ import (
 )
 
 type Config struct {
-    Server struct{
-        Port        int
-    }
-    DB struct {
-        Driver      string
-        Host        string
-        Port        int
-        User        string
-        Password    string
-        Name        string
-    }
+	Server struct {
+		Port string
+	}
+	DB struct {
+		Driver   string
+		Host     string
+		Port     string
+		User     string
+		Password string
+		Name     string
+	}
 }
 
 var AppConfig Config
 
 func LoadConfig() {
-    viper.SetConfigName("config")
-    viper.SetConfigType("yml")
-    viper.AddConfigPath(".")
+	viper.SetConfigName("config")
+	viper.SetConfigType("yml")
+	viper.AddConfigPath("./config")
 
-    if err := viper.ReadInConfig(); err != nil {
-        log.Fatalf("error reading config file, %v", err)
-    }
+	if err := viper.ReadInConfig(); err != nil {
+		log.Fatalf("error reading config file, %v", err)
+	}
 
-    if err := viper.Unmarshal(&AppConfig); err != nil {
-        log.Fatalf("unable to decode into a struct, %v", err)
-    }
+	if err := viper.Unmarshal(&AppConfig); err != nil {
+		log.Fatalf("unable to decode into a struct, %v", err)
+	}
 }
