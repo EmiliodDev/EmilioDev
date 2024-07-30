@@ -1,6 +1,6 @@
 package templates
 
-templ layout(title string, content string) {
+templ layout(title string) {
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -20,7 +20,7 @@ templ layout(title string, content string) {
             </nav>
         </header>
         <main>
-            {content}
+            { children... }
         </main>
         <footer>
             <p>© 2024 Emilio Ortiz</p>
