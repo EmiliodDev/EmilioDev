@@ -1,5 +1,5 @@
 build:
-	@go build -o bin/emiliodev cmd/emiliodev/main.go
+	@templ generate && go build -o bin/emiliodev cmd/emiliodev/main.go
 
 test:
 	@go test -v ./...

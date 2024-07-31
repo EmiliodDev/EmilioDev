@@ -39,7 +39,7 @@ func layout(title string) templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</title><link rel=\"stylesheet\" href=\"/static/css/styles.css\"></head><body><header><nav><ul><li><a href=\"/\">Home</a></li><li><a href=\"/about\">About</a></li><li><a href=\"/projects\">Projects</a></li></ul></nav></header><main>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</title><link rel=\"stylesheet\" href=\"/static/css/styles.css\"></head><body><header><nav class=\"navbar\"><h2>EmilioDev</h2><ul class=\"navbar-link-list\"><li><a class=\"navbar-link\" href=\"/\">Home</a></li><li><a class=\"navbar-link\" href=\"/about\">About</a></li><li><a class=\"navbar-link\" href=\"/projects\">Projects</a></li></ul></nav></header><main>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
